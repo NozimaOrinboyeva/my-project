@@ -1,6 +1,6 @@
 import './UserList.css'
 
-function UserList({ users }) {
+function UserList({ users , deleteUser}) {
     return (
         <div className='userList'>
             <div className='userList-container container'>
@@ -13,7 +13,7 @@ function UserList({ users }) {
                                 <p>From: {user.from}</p>
                                 <p>From: {user.job}</p>
                                 <p>From: {user.gender}</p>
-                                <button>Delet</button>
+                                <button onClick={() => deleteUser(user.id)}>Delet</button>
                             </div>
                         </div>
                     )
